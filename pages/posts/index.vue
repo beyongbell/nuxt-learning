@@ -1,16 +1,18 @@
 <template lang="">
     <div>
         <h2> Make API Request - the Vue Way </h2>
-        <div class="container">
-            <h2 v-for="(post, index) in posts" :key="post.id">
-                {{ post.title }}
-            </h2>
+        <div class="container row">
+            <Card v-for="(post, index) in posts" :key="post.id" :post="post" class="ml-auto mr-auto" />
         </div>
     </div>
 </template>
 <script>
 import axios from 'axios'
+import Card from '@/components/Card'
 export default {
+    components: {
+        Card
+    },
     data() {
         return {
             posts: ''
