@@ -21,31 +21,13 @@ export default {
     async asyncData() {
         // let response = await axios.get('https://jsonplaceholder.typicode.com/todos')
         // return { posts : response.data }
-        let {data} = await axios.get('https://jsonplaceholder.typicode.com/todos')
+        let {data} = await axios.get('https://jsonplaceholder.typicode.com/posts')
         return { posts : data }
     },
     head: {
         title: 'List of Post'
     }
 }
-
-// export default {
-//     data() {
-//         return {
-//             posts: []
-//         }
-//     },
-//     mounted() {
-//         axios.get('https://jsonplaceholder.typicode.com/todos')
-//         .then(response => {
-//             console.log(response.data)
-//             this.posts = response.data
-//         })
-//         .catch(error => {
-//             console.log(error)
-//         })
-//     }
-// }
 </script>
 <style lang="">
     
