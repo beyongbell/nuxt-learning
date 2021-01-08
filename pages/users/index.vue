@@ -1,6 +1,6 @@
 <template lang="">
     <div>
-        <h1> Users Page </h1>
+        <h1> Hello Users </h1>
     </div>
 </template>
 <script>
