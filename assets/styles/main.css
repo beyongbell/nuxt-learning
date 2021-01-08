@@ -1,6 +1,7 @@
 .jumbotron {
     border-radius: 0px;
-    background-image: url("https://cdn.pixabay.com/photo/2014/05/03/00/09/landscape-336542_960_720.jpg");
+    background-image: url("https://cdn.pixabay.com/photo/2016/05/24/16/48/mountains-1412683_960_720.png");
     background-size: cover;
+    background-position: center; 
     height: 300px;
 }
