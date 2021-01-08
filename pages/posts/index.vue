@@ -13,20 +13,34 @@ import axios from 'axios'
 export default {
     data() {
         return {
-            posts: []
+            posts: ''
         }
     },
-    mounted() {
-        axios.get('https://jsonplaceholder.typicode.com/todos')
+    asyncData() {
+        return axios.get('https://jsonplaceholder.typicode.com/todos')
         .then(response => {
-            console.log(response.data)
-            this.posts = response.data
+           return { posts : response.data }
         })
-        .catch(error => {
-            console.log(error)
-        })
-    }
+    },
 }
+
+// export default {
+//     data() {
+//         return {
+//             posts: []
+//         }
+//     },
+//     mounted() {
+//         axios.get('https://jsonplaceholder.typicode.com/todos')
+//         .then(response => {
+//             console.log(response.data)
+//             this.posts = response.data
+//         })
+//         .catch(error => {
+//             console.log(error)
+//         })
+//     }
+// }
 </script>
 <style lang="">
     
