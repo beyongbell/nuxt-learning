@@ -8,7 +8,22 @@ export default {
       { hid: 'description', name: 'description', content: '' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'stylesheet' , href='https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css' }
+    ],
+    script: [
+      {
+        src: 'https://code.jquery.com/jquery-3.5.1.slim.min.js',
+        type: 'text/javascript'
+      },
+      {
+        src: 'https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js',
+        type: 'text/javascript'
+      },
+      {
+        src: 'https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js',
+        type: 'text/javascript'
+      }
     ]
   },
 
