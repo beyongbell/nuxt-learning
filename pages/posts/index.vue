@@ -8,9 +8,8 @@
     </div>
 </template>
 <script>
-import axios from 'axios'
 import Card from '@/components/Card'
-import mapGetters from 'vuex'
+
 export default {
     components: {
         Card
@@ -21,18 +20,17 @@ export default {
         }
     },
     computed: {
-        // ...mapGetters(['posts'])
         posts() {
             return this.$store.getters.posts
         }
     },
     // async asyncData({store}) {
-    async fetch({store}) {
-        // let response = await axios.get('https://jsonplaceholder.typicode.com/todos')
-        // return { allPosts : response.data }
-        let {data} = await axios.get('https://jsonplaceholder.typicode.com/posts')
-        store.dispatch('setPosts', data)
-    },
+    // async fetch({store}) {
+    //     // let response = await axios.get('https://jsonplaceholder.typicode.com/todos')
+    //     // return { allPosts : response.data }
+    //     let {data} = await axios.get('https://jsonplaceholder.typicode.com/posts')
+    //     store.dispatch('setPosts', data)
+    // },
     head: {
         title: 'List of Post'
     }
