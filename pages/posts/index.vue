@@ -3,6 +3,7 @@
         <h2> Make API Request - the Vue Way </h2>
         <div class="container row">
             <Card v-for="(post, index) in posts" :key="post.id" :post="post" class="ml-auto mr-auto" />
+            <button class="btn btn-danger" v-scroll-to="'body'"> Back to Top </button>
         </div>
     </div>
 </template>
