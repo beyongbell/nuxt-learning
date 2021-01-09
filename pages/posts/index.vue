@@ -9,6 +9,7 @@
 </template>
 <script>
 import Card from '@/components/Card'
+import axios from 'axios'
 
 export default {
     components: {
@@ -24,13 +25,10 @@ export default {
             return this.$store.getters.posts
         }
     },
-    // async asyncData({store}) {
-    // async fetch({store}) {
-    //     // let response = await axios.get('https://jsonplaceholder.typicode.com/todos')
-    //     // return { allPosts : response.data }
-    //     let {data} = await axios.get('https://jsonplaceholder.typicode.com/posts')
-    //     store.dispatch('setPosts', data)
-    // },
+    async fetch({store}) { // asyncData
+        let {data} = await axios.get('https://jsonplaceholder.typicode.com/posts')
+        store.dispatch('setPosts', data)
+    },
     head: {
         title: 'List of Post'
     }
