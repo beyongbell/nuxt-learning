@@ -9,18 +9,26 @@
 <script>
 import axios from 'axios'
 import Card from '@/components/Card'
+import mapGetters from 'vuex'
 export default {
     components: {
         Card
     },
     data() {
         return {
-            posts: ''
+            allPosts: ''
         }
     },
-    async asyncData({store}) {
+    computed: {
+        // ...mapGetters(['posts'])
+        posts() {
+            return this.$store.getters.posts
+        }
+    },
+    // async asyncData({store}) {
+    async fetch({store}) {
         // let response = await axios.get('https://jsonplaceholder.typicode.com/todos')
-        // return { posts : response.data }
+        // return { allPosts : response.data }
         let {data} = await axios.get('https://jsonplaceholder.typicode.com/posts')
         store.dispatch('setPosts', data)
     },
@@ -29,6 +37,7 @@ export default {
     }
 }
 </script>
+
 <style lang="">
-    
+
 </style>
