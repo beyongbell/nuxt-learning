@@ -1,7 +1,17 @@
 .jumbotron {
-    border-radius: 0px;
-    background-image: url("/mountains.png");
-    background-size: cover;
-    background-position: center; 
-    height: 300px;
+  border-radius: 0px;
+  background-image: url("/mountains.png");
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .2s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
 }
